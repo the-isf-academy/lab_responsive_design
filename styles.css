@@ -3,7 +3,9 @@
 :root {
     --bg-gradient: radial-gradient(circle, rgba(44,55,111,1) 46%, rgba(87,26,70,1) 100%);
     --border-gradient: linear-gradient(to right, rgb(193, 193, 237), rgb(234, 193, 255)) 1;
-
+    --color1: white;
+    --color2: rgb(67, 77, 131);
+    --color3: rgb(93, 102, 148);
 }
 
 html{
@@ -16,8 +18,8 @@ html{
 
 body{
     margin: 0;
-    background: var(--bg-gradient);
-    color: white; 
+    background: var(--bg-gradient) fixed;
+    color: var(--color1); 
 }
 
 .header{
@@ -28,7 +30,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    /* color: white; */
     backdrop-filter: blur(5px);
 }
 
@@ -109,6 +111,7 @@ h1:hover{
 }
 
 h2{
+
     border-image: var(--border-gradient);
     border-width: 0px 0px 3px 0px;
     border-style: solid;
@@ -129,46 +132,33 @@ h2
 } 
 
 #top-link{
-    color: rgba(255, 255, 255, 0.506);
+    color: var(--color2);
     text-decoration: none;
     font-size: italic;
     margin-bottom: 50px;
 }
 
 #top-link:hover{
-    color: rgba(196, 194, 194, 0.506);
+    color: var(--color3);
 }
 
 /* FOR MOBILE SCREEN SIZE */
 
 @media only screen and (min-width: 375px) and (max-width: 767px)
 {
-    body{
-        position: absolute;
-    }
-
     .container {
-        display: block;
-        margin-top: 0px;
+        display: flex;
+        margin-top: none;
     }
 
-    .col-2{
-        margin: auto;
-        width: 50%;
-        text-align: center;
-    }
+     .col-2{
+        margin: none;
+        width: none;
+        text-align: none;
+    } 
 
-    .header{
-        width: 100%;
-    }
+    /* Add more changes below! Experiment with the properties above! */
 
-    h4{
-        padding: 10px 10px;
-    }
-
-    /* .col-2 a{
-        text-align: center;
-    } */
 
 }
 
