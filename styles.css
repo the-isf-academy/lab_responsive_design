@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --bg-gradient: radial-gradient(circle, rgba(44,55,111,1) 46%, rgba(87,26,70,1) 100%);
+    --border-gradient: linear-gradient(to right, rgb(193, 193, 237), rgb(234, 193, 255)) 1;
+
+}
+
 html{
     font-family: "Quicksand", sans-serif;
     font-size: 1.5rem;
@@ -10,8 +16,7 @@ html{
 
 body{
     margin: 0;
-    background: rgb(73,90,138);
-    background: radial-gradient(circle, rgba(73,90,138,1) 59%, rgba(82,119,164,1) 100%);
+    background: var(--bg-gradient);
     color: white; 
 }
 
@@ -43,9 +48,11 @@ body{
 
 .border-box{
     padding: 10px 10px;
-    border-image: linear-gradient(to right, rgb(193, 193, 237), rgb(234, 193, 255)) 1;
+    border-image: var(--border-gradient);
     border-width: 5px;
     border-style: solid;
+    border-radius: 50em;
+
 }
 
 
@@ -73,7 +80,6 @@ body{
 
 
 h1{
-    /* transition: background-size 0.5s; */
     background: linear-gradient(currentColor 0 0) ;
     background-position: 0 100%;    /*OR bottom left*/
     background-size: 0% 2px;
@@ -103,8 +109,7 @@ h1:hover{
 }
 
 h2{
-
-    border-image: linear-gradient(to right, rgb(193, 193, 237), rgb(234, 193, 255)) 1;
+    border-image: var(--border-gradient);
     border-width: 0px 0px 3px 0px;
     border-style: solid;
     padding: 0px 10px;
