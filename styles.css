@@ -30,12 +30,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* color: white; */
     backdrop-filter: blur(5px);
 }
 
+h1{
+    animation: flipInX;
+    animation-duration: 1s;
+}
 
-.container{
+.flexbox{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,7 +60,6 @@ body{
 
 }
 
-
 .col-2 a{
     margin: 20px 0;
     color: white;
@@ -68,46 +70,22 @@ body{
     text-decoration: underline;
 }
 
-.nav-bar{
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-}
-
 
 .border-box{
     margin: 0px 10px;
 }
 
 
-h1{
-    background: linear-gradient(currentColor 0 0) ;
-    background-position: 0 100%;    /*OR bottom left*/
-    background-size: 0% 2px;
-    background-repeat: no-repeat;
-    transition:
-        background-size 0.3s,
-        background-position 0s 0.3s; /*change after the size immediately*/
-}
-
-
-h1:hover{
-    background-position: 100% 100%; /*OR bottom right*/
-    background-size: 100% 2px;
-
-}
-
-
-.container-text{
+.sections{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.container-text p{
+.sections p{
     width: 75%;
+  
 }
 
 h2{
@@ -117,19 +95,7 @@ h2{
     border-style: solid;
     padding: 0px 10px;
 }
-h2
 
-.wiggle:hover{
-    animation: animate 2s ease-in-out infinite;
-   
-}
-
-@keyframes animate {
-    0% {transform: translateY(0px);}
-    20% {transform: translateY(-5px) translatex(-5px);}
-    40%,
-    100% {transform: translateY(0px);}
-} 
 
 #top-link{
     color: var(--color2);
@@ -142,24 +108,12 @@ h2
     color: var(--color3);
 }
 
-/* FOR MOBILE SCREEN SIZE */
+/* FOR SCREEN SIZE SMALLER THAN 767 PX */
 
-@media only screen and (min-width: 375px) and (max-width: 767px)
-{
-    .container {
+@media (max-width: 767px) {
+    .flexbox {
         display: flex;
-        margin-top: none;
+        margin-top: 0px;
     }
 
-     .col-2{
-        margin: none;
-        width: none;
-        text-align: none;
-    } 
-
-    /* Add more changes below! Experiment with the properties above! */
-
-
 }
-
-
