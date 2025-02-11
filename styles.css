@@ -52,7 +52,6 @@ body{
     border-width: 5px;
     border-style: solid;
     border-radius: 50em;
-
 }
 
 
@@ -118,7 +117,6 @@ h2
 
 .wiggle:hover{
     animation: animate 2s ease-in-out infinite;
-   
 }
 
 @keyframes animate {
